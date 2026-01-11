@@ -13,13 +13,13 @@ export const projects = [
       { src: '/images/projects/moov/moov-2.png', alt: 'Moov activity discovery', bgColor: '#F7996F' },
       { src: '/images/projects/moov/moov-3.png', alt: 'Moov session matching', bgColor: '#FAB08A' },
     ],
-    intro: `Moov is a social activity platform designed to help people connect through shared movement rather than messaging. Instead of feeds, swiping, or group chats, Moov focuses on real-world activity—connecting people nearby who want to play the same sports, join the same sessions, or get active at the same time.
+    intro: `Moov is a social activity platform designed to help people connect through shared movement rather than messaging. Instead of feeds, swiping, or group chats, Moov focuses on real-world activity, connecting people nearby who want to play the same sports, join the same sessions, or get active at the same time.
 
 The core idea is simple: people form stronger connections when they do things together. Moov reduces the friction of organising plans and finding activity partners, turning quick decisions into real sessions and real social interaction.`,
     sections: [
       {
         title: 'Product Vision',
-        content: `Moov is built around the belief that social connection should feel effortless and immediate. Users open the app, select an activity they're in the mood for—tennis, football, running, padel—and instantly see relevant people and sessions happening nearby, now or later that day.
+        content: `Moov is built around the belief that social connection should feel effortless and immediate. Users open the app, select an activity they're in the mood for (tennis, football, running, padel) and instantly see relevant people and sessions happening nearby, now or later that day.
 
 The focus is on low friction, high intent, and minimal social pressure:
 simple choices → instant matches → real activity → genuine connection.`,
@@ -28,7 +28,7 @@ simple choices → instant matches → real activity → genuine connection.`,
         title: 'Engineering Focus',
         content: `Moov is being developed as a scalable, event-driven platform with a strong backend foundation. While the product is still in its early stages, the architecture is designed to support real-time discovery, session matching, and future growth.
 
-I'm leading the project end to end—product design, backend architecture, frontend development, and infrastructure—treating it as a real startup build rather than a throwaway prototype.`,
+I'm leading the project end to end: product design, backend architecture, frontend development, and infrastructure, treating it as a real startup build rather than a throwaway prototype.`,
       },
       {
         title: 'Architecture & Tech Stack',
@@ -92,7 +92,7 @@ I'm leading the project end to end—product design, backend architecture, front
       },
       {
         title: 'Data Ingestion & Reliability',
-        content: `A key challenge was working with the official FPL API, which is rate-limited and occasionally unstable. I designed ingestion pipelines that prioritised resilience—handling retries, backoff, and partial failures—while keeping analytics data as fresh and consistent as possible.`,
+        content: `A key challenge was working with the official FPL API, which is rate-limited and occasionally unstable. I designed ingestion pipelines that prioritised resilience, handling retries, backoff, and partial failures, while keeping analytics data as fresh and consistent as possible.`,
       },
       {
         quote: {
@@ -131,7 +131,7 @@ I'm leading the project end to end—product design, backend architecture, front
       },
       {
         title: 'Website Design & Delivery',
-        content: `I led the full website rebuild, owning the process end to end—from design through to deployment. The focus was on creating a clean, professional, and trustworthy web presence suitable for a medico-legal audience, while ensuring performance, accessibility, and ease of future updates.`,
+        content: `I led the full website rebuild, owning the process end to end, from design through to deployment. The focus was on creating a clean, professional, and trustworthy web presence suitable for a medico-legal audience, while ensuring performance, accessibility, and ease of future updates.`,
         bullets: [
           { label: '', text: 'End-to-end website design and development' },
           { label: '', text: 'Responsive, modern UI aligned with healthcare professionalism' },
@@ -250,7 +250,7 @@ Key elements included:`,
     sections: [
       {
         title: 'End-to-End Ownership',
-        content: `Although Ballerr was not a commercial startup, I treated it like one. I led the full lifecycle independently—from initial idea and UX design through backend architecture, implementation, deployment, and marketing asset creation. This project allowed me to work with startup-level autonomy and make real trade-offs around scope, performance, and usability.`,
+        content: `Although Ballerr was not a commercial startup, I treated it like one. I led the full lifecycle independently, from initial idea and UX design through backend architecture, implementation, deployment, and marketing asset creation. This project allowed me to work with startup-level autonomy and make real trade-offs around scope, performance, and usability.`,
       },
       {
         title: 'Tech Stack',
@@ -305,7 +305,7 @@ Key elements included:`,
     sections: [
       {
         title: 'Rapid Build & Launch',
-        content: `Footle was designed, developed, and deployed within three days. The tight timeline required pragmatic technical decisions, a strong focus on core user experience, and ruthless scope control—mirroring the constraints of an early-stage startup environment.`,
+        content: `Footle was designed, developed, and deployed within three days. The tight timeline required pragmatic technical decisions, a strong focus on core user experience, and ruthless scope control, mirroring the constraints of an early-stage startup environment.`,
       },
       {
         title: 'End-to-End Ownership',
@@ -329,7 +329,7 @@ Key elements included:`,
       },
       {
         title: 'User Engagement',
-        content: `The daily puzzle format encourages natural retention, with users returning each day to maintain streaks and share results socially—validating the core gameplay loop and UX decisions.`,
+        content: `The daily puzzle format encourages natural retention, with users returning each day to maintain streaks and share results socially, validating the core gameplay loop and UX decisions.`,
       },
       {
         quote: {
@@ -368,7 +368,7 @@ Key elements included:`,
       },
       {
         title: 'Website Design & Delivery',
-        content: `I led the full website creation end to end—from creative direction and design through to deployment. Key considerations included prioritising their music and visuals, creating a dark and atmospheric vibe, and integrating streaming and social platforms.`,
+        content: `I led the full website creation end to end, from creative direction and design through to deployment. Key considerations included prioritising their music and visuals, creating a dark and atmospheric vibe, and integrating streaming and social platforms.`,
         bullets: [
           { label: '', text: 'Artistic, moody design reflecting the band\'s unique identity' },
           { label: '', text: 'Integration of music embeds (Spotify, SoundCloud), tour dates, and photography' },

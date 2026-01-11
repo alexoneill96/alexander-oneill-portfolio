@@ -9,7 +9,7 @@ export const posts = [
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop',
     bgColor: '#6366F1',
     content: `
-      <p>Joining a startup is like jumping onto a speeding train and trying to figure out the controls while it's moving. When I joined Ekorn, a fintech startup modernising the platform for financial advisers, the pace and scope of responsibility were unlike anything I'd experienced before. Within a month of joining, the lead backend engineer left, leaving me as the sole backend engineer. It was intense, challenging, and incredibly rewarding -and it taught me lessons that go far beyond code.</p>
+      <p>Joining a startup is like jumping onto a speeding train and trying to figure out the controls while it's moving. When I joined Ekorn, a fintech startup transforming the financial adviser and client experience through a holistic technology platform, the pace and scope of responsibility were unlike anything I'd experienced before. Within a month of joining, the lead backend engineer left, leaving me as the sole backend engineer. It was intense, challenging, and incredibly rewarding -and it taught me lessons that go far beyond code.</p>
 
       <p>Here's what I've learned since joining a startup environment:</p>
 

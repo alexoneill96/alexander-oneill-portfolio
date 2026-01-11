@@ -18,8 +18,8 @@ export default function AboutContent() {
 
         <p>
           Currently, I'm at <a href="https://ekorn.com" target="_blank" rel="noopener noreferrer" className="text-gray-900 dark:text-white font-semibold hover:underline">Ekorn</a>,
-          a fintech startup modernising the platform for financial advisers. When I joined,
-          the lead engineer left within a month—leaving me as the sole backend engineer.
+          a fintech startup transforming the financial adviser and client experience through a holistic technology platform. When I joined,
+          the lead engineer left within a month, leaving me as the sole backend engineer.
           What followed was one of the most intense and rewarding periods of my career.
         </p>
 
