@@ -25,7 +25,7 @@ const createGradient = (hexColor) => {
 }
 
 // Get featured projects for the slider
-const featuredSlugs = ['moov', 'menarys', 'oneill-medico-legal', 'ballerr', 'footle']
+const featuredSlugs = ['moov', 'quiverbot', 'oneill-medico-legal', 'ballerr', 'footle']
 const featuredProjects = featuredSlugs.map(slug => projects.find(p => p.slug === slug)).filter(Boolean)
 
 // Create 5 slides from the 5 featured projects
@@ -39,8 +39,8 @@ const slides = [
   },
   {
     id: 2,
-    title: featuredProjects[1]?.name || 'fpltrackr',
-    category: featuredProjects[1]?.category || 'Full Stack, Product Design',
+    title: featuredProjects[1]?.name || 'QuiverBot',
+    category: featuredProjects[1]?.category || 'Full Stack, AI/ML, Data Engineering',
     image: featuredProjects[1]?.images?.[0]?.src || featuredProjects[1]?.image,
     bgColor: featuredProjects[1]?.images?.[0]?.bgColor || featuredProjects[1]?.bgColor,
   },

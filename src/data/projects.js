@@ -111,6 +111,80 @@ I'm leading the project end to end: product design, backend architecture, fronte
     ],
   },
   {
+    slug: 'quiverbot',
+    name: 'QuiverBot',
+    subtitle: 'Personal Full-Stack Side Project',
+    type: 'personal',
+    isNew: true,
+    category: 'Full Stack, AI/ML, Data Engineering',
+    year: '2026',
+    bgColor: '#1E3A5F',
+    images: [
+      { src: '/images/projects/quiverbot/quiverbot-1.png', alt: 'QuiverBot alerting service', bgColor: '#1E3A5F' },
+    ],
+    intro: `QuiverBot is a real-time data ingestion and alerting service I built to solve a specific problem: congressional stock trades are public information, but extracting actionable signals from the noise requires domain expertise and constant attention. This service automates that process.
+
+The system polls Twitter every 5 minutes for QuiverQuant's congressional trade announcements, uses OpenAI's GPT-4 to classify each tweet and extract actionable signals, and delivers alerts for high-confidence matches. A daily summary provides a narrative overview of the previous 24 hours of activity.
+
+This was an exercise in building a production-grade data pipeline with proper error handling, rate limit management, and clean architecture. The kind of service that needs to run reliably without babysitting.`,
+    sections: [
+      {
+        title: 'End-to-End Pipeline Design',
+        content: `The service runs four scheduled jobs that form a continuous pipeline:
+
+Ingestion (every 5 minutes): Polls RapidAPI's Twitter endpoint for new QuiverQuant tweets. Uses BigInteger comparison of tweet IDs to detect already-seen content and stop early, conserving the free-tier's 1,000 monthly request quota.
+
+Classification (every 1 minute): Processes unclassified tweets through OpenAI GPT-4. Extracts signal strength (0.0-1.0), category, tickers mentioned, and a brief summary.
+
+Alerting (every 30 seconds): Batches high-confidence signals into notifications and dispatches via email and Telegram bot. Failure in one channel doesn't block others.
+
+Daily Summary (8 AM EST): Collects signals from the past 24 hours and uses GPT-4 to generate a narrative summary with the top 10 signals highlighted.`,
+      },
+      {
+        title: 'Architecture & Tech Stack',
+        content: `QuiverBot follows a hexagonal (ports and adapters) architecture where the domain layer has zero external dependencies. This makes swapping Twitter providers, LLM services, or notification channels trivial.`,
+        bullets: [
+          { label: 'Backend', text: 'Kotlin 1.9 + Spring Boot 3.2 with type-safe configuration' },
+          { label: 'Database', text: 'PostgreSQL 16 with Flyway-managed migrations' },
+          { label: 'LLM Integration', text: 'OpenAI GPT-4 with structured output extraction and fallback handling' },
+          { label: 'Notifications', text: 'Multi-channel dispatch (Email via Sender.net, Telegram Bot API)' },
+          { label: 'HTTP Client', text: 'OkHttp for all external API calls' },
+          { label: 'Deployment', text: 'Docker multi-stage builds, Railway-ready with health checks' },
+        ],
+      },
+      {
+        title: 'Key Technical Decisions',
+        content: `RapidAPI over Official Twitter API: The official API requires expensive authentication tiers. RapidAPI's free tier has aggressive limits (1,000 requests/month), so I built quota-conservation logic to fetch one page per poll, compare tweet IDs as BigIntegers to detect overlap, and stop early when hitting already-seen content.
+
+Graceful Degradation: If GPT-4 returns malformed JSON (sometimes wrapped in markdown), regex extraction handles it. If that fails, the signal is marked low-confidence rather than crashing the batch.`,
+      },
+      {
+        title: 'Production-Grade Features',
+        bullets: [
+          { label: '', text: 'AtomicBoolean concurrency control prevents duplicate job runs' },
+          { label: '', text: 'Comprehensive debug endpoints for manual testing and inspection' },
+          { label: '', text: 'Test mode logs emails to console instead of sending' },
+          { label: '', text: 'Health checks for all external dependencies (Twitter, LLM, notifications)' },
+          { label: '', text: '15+ environment variables for thresholds, schedules, and feature flags' },
+        ],
+      },
+      {
+        quote: {
+          text: "QuiverBot was about building infrastructure that runs reliably without intervention, handling edge cases, rate limits, and external API quirks so I don't have to.",
+        },
+      },
+      {
+        title: 'Key Learnings',
+        bullets: [
+          { label: '', text: 'Designing resilient pipelines against rate-limited and occasionally unreliable APIs' },
+          { label: '', text: 'Structuring LLM integrations with proper fallback and validation' },
+          { label: '', text: 'Building configurable systems where business logic changes don\'t require code deploys' },
+          { label: '', text: 'Applying clean architecture patterns in a Kotlin Spring Boot codebase' },
+        ],
+      },
+    ],
+  },
+  {
     slug: 'oneill-medico-legal',
     name: "O'Neill Medico-Legal",
     subtitle: 'Freelance Web & AI Workflow Project',
